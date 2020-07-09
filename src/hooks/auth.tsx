@@ -30,11 +30,13 @@ interface IAuthContextData {
   signIn(credentials: ISignInCredentials): Promise<void>;
   signOut(): void;
   updatedUser(data: IUser): void;
+  loading: boolean;
 }
 
 const AuthContext = createContext<IAuthContextData>({} as IAuthContextData);
 
 const AuthProvider: React.FC = ({ children }) => {
+  const [loading, setLoading] = useState(true);
   const [data, setData] = useState<IAuthState>({} as AuthState);
 
   useEffect(() => {
@@ -47,6 +49,8 @@ const AuthProvider: React.FC = ({ children }) => {
       if (token[1] && user[1]) {
         setData({ token: token[1], user: JSON.parse(user[1]) });
       }
+
+      setLoading(false);
     }
 
     loadStorageDate();
@@ -91,7 +95,7 @@ const AuthProvider: React.FC = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ user: data.user, signIn, signOut, updatedUser }}
+      value={{ user: data.user, signIn, signOut, updatedUser, loading }}
     >
       {children}
     </AuthContext.Provider>
