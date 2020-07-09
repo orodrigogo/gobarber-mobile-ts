@@ -30,6 +30,7 @@
     ],
     "rules": {
         "prettier/prettier": "error",
+        "camelcase": "off",
         "@typescript-eslint/ban-types": "off",
         "react/jsx-props-no-spreading": "off",
         "react-hooks/rules-of-hooks": "error",
