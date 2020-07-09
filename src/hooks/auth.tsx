@@ -42,7 +42,7 @@ const AuthProvider: React.FC = ({ children }) => {
   useEffect(() => {
     async function loadStorageDate(): Promise<void> {
       const [token, user] = await AsyncStorage.multiGet([
-        '@GoBarber:user',
+        '@GoBarber:token',
         '@GoBarber:user',
       ]);
 
