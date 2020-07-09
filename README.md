@@ -20,7 +20,8 @@ A versão **mobile** é destinado aos clientes das barbearias e está disponíve
 
 
 - [x] Utilização do [react-native-iphone-x-helper](https://github.com/ptelad/react-native-iphone-x-helper) para pegar informações de tela de iphonex para facilitar a elaboração de layout;
-- [x] Utilização do [unform](https://unform.dev/) para lidar com formulários;
+- [x] Utilização do [Unform](https://unform.dev/) para lidar com formulários;
+- [x] Utilização do [Yup](https://github.com/jquense/yup) para validação de dados;
 
 
 
