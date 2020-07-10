@@ -26,6 +26,7 @@ A versão **mobile** é destinado aos clientes das barbearias e está disponíve
 - [x] Utilização da biblioteca [react-native-image-picker](https://github.com/react-native-community/react-native-image-picker) para acessar a câmera para tirar uma foto ou selecionar uma foto existente da galeria de imagens;
 - [x] Utilização do repositório [Avatars.adorable.io](http://avatars.adorable.io/) para utilizar imagens quando a pessoa não tem um foto definida;
 - [x] Utilização do [Flipper](https://fbflipper.com/) para debugar a aplicação;
+- [ ] Sugestão para aplicar a biblioteca [ImageEditor](https://github.com/react-native-community/react-native-image-editor) para reduzir o tamanho e compactar a imagem de avatar do usuário.
 
 
 
