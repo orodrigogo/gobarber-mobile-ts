@@ -26,6 +26,7 @@ import {
   UserAvatarButton,
   UserAvatar,
   BackButton,
+  Header,
 } from './styles';
 
 import { useAuth } from '../../hooks/auth';
@@ -39,7 +40,7 @@ interface ProfileFormData {
 }
 
 const Profile: React.FC = () => {
-  const { user, updatedUser } = useAuth();
+  const { user, updatedUser, signOut } = useAuth();
   const formRef = useRef<FormHandles>(null);
   const emailInputRef = useRef<TextInput>(null);
   const oldPasswordInputRef = useRef<TextInput>(null);
@@ -172,9 +173,15 @@ const Profile: React.FC = () => {
           contentContainerStyle={{ flex: 1 }}
         >
           <Container>
-            <BackButton onPress={handleGoBack}>
-              <Icon name="chevron-left" size={24} color="#999591" />
-            </BackButton>
+            <Header>
+              <BackButton onPress={handleGoBack}>
+                <Icon name="chevron-left" size={24} color="#999591" />
+              </BackButton>
+
+              <BackButton onPress={signOut}>
+                <Icon name="power" size={24} color="#999591" />
+              </BackButton>
+            </Header>
             <UserAvatarButton onPress={handleUpdateAvatar}>
               <UserAvatar source={{ uri: user.avatar_url }} />
             </UserAvatarButton>
