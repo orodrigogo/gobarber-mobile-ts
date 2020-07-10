@@ -103,7 +103,6 @@ const Dashboard: React.FC = () => {
           </ProviderContainer>
         )}
       />
-      <Button title="Sair" onPress={signOut} />
     </Container>
   );
 };
